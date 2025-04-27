@@ -27,7 +27,7 @@ class CarType extends StatelessWidget {
               padding: const EdgeInsets.all(4),
               child: Text(
                 text,
-                style: const TextStyle(color: Colors.white38, fontSize: 16),
+                style: const TextStyle(color: Colors.white, fontSize: 16),
                 textAlign: TextAlign.center,
               ),
             ),
