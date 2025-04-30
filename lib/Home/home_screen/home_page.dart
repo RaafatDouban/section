@@ -1,9 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:section_1/Profile/profile_widgets/user_model.dart';
 import '../../Profile/profile_page/profile_page.dart';
 import '../../first_screen.dart';
 import '../home_widgets/home_widgets.dart';
+import 'package:provider/provider.dart';
 
 class MyHomePage extends StatelessWidget {
   final String? title;
@@ -14,6 +16,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final profileImage = Provider.of<UserModel>(context).user?.image;
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -34,7 +37,19 @@ class MyHomePage extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => ProfilePage()),
               );
             },
-            icon: Icon(Icons.account_box),
+            icon:
+                profileImage == null
+                    ? Icon(Icons.account_box)
+                    : CircleAvatar(
+                      child: ClipOval(
+                        child: Image.file(
+                          profileImage,
+                          fit: BoxFit.cover,
+                          height: 50,
+                          width: 50,
+                        ),
+                      ),
+                    ),
           ),
         ],
         centerTitle: true,

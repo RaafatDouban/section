@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:section_1/Profile/profile_widgets/user_model.dart';
 import 'package:section_1/first_screen.dart';
+import 'package:provider/provider.dart';
 
 import 'Home/home_screen/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => UserModel(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatefulWidget {

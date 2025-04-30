@@ -212,6 +212,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///Users/raafatdouban/.pub-cache/hosted/pub.dev/nested-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/raafatdouban/.pub-cache/hosted/pub.dev/path-1.9.1",
       "packageUri": "lib/",
@@ -222,6 +228,12 @@
       "rootUri": "file:///Users/raafatdouban/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///Users/raafatdouban/.pub-cache/hosted/pub.dev/provider-6.1.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "sky_engine",
@@ -296,7 +308,7 @@
       "languageVersion": "3.7"
     }
   ],
-  "generated": "2025-04-13T20:13:00.366877Z",
+  "generated": "2025-04-30T20:04:24.759574Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///Users/raafatdouban/Development/flutter",
