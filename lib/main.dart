@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:section_1/Profile/profile_widgets/user_model.dart';
-import 'package:section_1/first_screen.dart';
+import 'package:section_1/dashboard/dashboard_screen.dart';
+import 'package:section_1/add_item/add_item_screen.dart';
 import 'package:provider/provider.dart';
-
-import 'Home/home_screen/home_page.dart';
+import 'add_item/item_model.dart';
+import 'details/details_screen/details_page.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => UserModel(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => UserModel()),
+        ChangeNotifierProvider(create: (context) => ItemModel()),
+      ],
       child: const MyApp(),
     ),
   );
@@ -31,7 +35,7 @@ class _MyAppState extends State<MyApp> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: firstscreen(),
+      home: DashboardScreen(),
 
       // MyHomePage(title: 'The World of Automobiles'),
     );

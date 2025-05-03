@@ -87,7 +87,7 @@
     },
     {
       "name": "flutter_plugin_android_lifecycle",
-      "rootUri": "file:///Users/raafatdouban/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.27",
+      "rootUri": "file:///Users/raafatdouban/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.28",
       "packageUri": "lib/",
       "languageVersion": "3.6"
     },
@@ -123,7 +123,7 @@
     },
     {
       "name": "image_picker_android",
-      "rootUri": "file:///Users/raafatdouban/.pub-cache/hosted/pub.dev/image_picker_android-0.8.12+22",
+      "rootUri": "file:///Users/raafatdouban/.pub-cache/hosted/pub.dev/image_picker_android-0.8.12+23",
       "packageUri": "lib/",
       "languageVersion": "3.6"
     },
@@ -308,7 +308,7 @@
       "languageVersion": "3.7"
     }
   ],
-  "generated": "2025-04-30T20:04:24.759574Z",
+  "generated": "2025-05-03T16:02:59.149551Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///Users/raafatdouban/Development/flutter",
