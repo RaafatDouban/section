@@ -6,7 +6,6 @@ import 'package:section_1/details/details_widgets/details_widgets.dart';
 import '../../Profile/profile_page/profile_page.dart';
 import '../../add_item/add_item_screen.dart';
 import '../../add_item/item_model.dart';
-import '../details_widgets/details_widgets.dart';
 import 'package:provider/provider.dart';
 
 class DetailsPage extends StatelessWidget {
@@ -87,7 +86,9 @@ class DetailsPage extends StatelessWidget {
                     onPressed: () {},
                     icon: const Icon(Icons.share, color: Colors.blue),
                   ),
-                  FavouriteWidget(),
+                  FavouriteWidget(
+                    index: items.items.indexOf(items.SelectedItem!),
+                  ),
                 ],
               ),
               Padding(

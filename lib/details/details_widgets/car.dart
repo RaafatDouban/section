@@ -23,7 +23,7 @@ class CarType extends StatelessWidget {
             ),
             Container(
               width: 120,
-              color: Colors.black.withOpacity(0.5),
+              color: Colors.black.withAlpha(5),
               padding: const EdgeInsets.all(4),
               child: Text(
                 text,

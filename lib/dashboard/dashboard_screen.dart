@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:section_1/add_item/item.dart';
 import 'package:section_1/add_item/item_model.dart';
 import 'package:section_1/details/details_screen/details_page.dart';
+import 'package:section_1/details/details_widgets/details_widgets.dart';
+import 'package:section_1/favourite/favourite_model.dart';
 
 import '../Profile/profile_page/profile_page.dart';
 import '../Profile/profile_widgets/user_model.dart';
@@ -71,7 +73,7 @@ class DashboardScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.2),
+                    color: Colors.grey,
                     blurRadius: 5,
                     offset: Offset(0, 2),
                   ),
@@ -87,17 +89,40 @@ class DashboardScreen extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                   SizedBox(height: 8),
-                  Text(
-                    items.items[index].title,
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          items.items[index].title,
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      FavouriteWidget(
+                        index: items.items.indexOf(items.items[index]),
+                      ),
+                      // IconButton(
+                      //   onPressed: () {
+                      //     Provider.of<FavouriteModel>(
+                      //       context,
+                      //       listen: false,
+                      //     ).add(items.items[index]);
+                      //   },
+                      //   icon: Icon(Icons.favorite),
+                      // ),
+                    ],
                   ),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: IconButton.filledTonal(
-                      onPressed: () {},
-                      icon: Icon(Icons.favorite),
-                    ),
-                  ),
+                  // Align(
+                  //   alignment: Alignment.centerRight,
+                  //   child: IconButton.filledTonal(
+                  //     onPressed: () {},
+                  //     icon: Icon(Icons.favorite),
+                  //   ),
+                  // ),
                 ],
               ),
             ),

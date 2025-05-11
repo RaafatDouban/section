@@ -1,13 +1,10 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+
 import 'package:provider/provider.dart';
 import 'package:section_1/add_item/item.dart' show Item;
 import 'package:section_1/add_item/item_model.dart';
 import 'package:section_1/dashboard/dashboard_screen.dart';
 import 'package:section_1/details/details_screen/details_page.dart';
-import '../details/details_screen/details_page.dart';
 
 class AddItemScreen extends StatefulWidget {
   const AddItemScreen({super.key});

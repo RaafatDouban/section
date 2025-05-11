@@ -16,7 +16,7 @@ class UserModel extends ChangeNotifier {
     if (image != null) {
       {
         if (_user != null) {
-          _user?.image = File(image!.path);
+          _user?.image = File(image.path);
         } else {
           _user = User(
             name: "Raafat",
