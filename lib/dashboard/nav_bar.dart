@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../Profile/profile_page/profile_page.dart';
 import '../Quote/Quote_screen.dart';
 import '../favourite/favourite_screen.dart';
+import '../task/task.dart';
 import 'dashboard_screen.dart';
 
 class NavBar extends StatefulWidget {
@@ -32,6 +33,7 @@ class _NavBarState extends State<NavBar> {
             FavouriteScreen(),
             QuoteScreen(),
             ProfilePage(),
+            TaskScreen(),
           ][_selectedIndex],
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (index) {
@@ -51,6 +53,7 @@ class _NavBarState extends State<NavBar> {
             label: "Quotes",
           ),
           NavigationDestination(icon: Icon(Icons.person), label: "Person"),
+          NavigationDestination(icon: Icon(Icons.laptop_mac), label: "Task"),
         ],
       ),
     );
