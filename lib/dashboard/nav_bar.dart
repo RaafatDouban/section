@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Profile/profile_page/profile_page.dart';
+import '../Quote/Quote_screen.dart';
 import '../favourite/favourite_screen.dart';
 import 'dashboard_screen.dart';
 
@@ -25,7 +26,13 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:
-          [DashboardScreen(), FavouriteScreen(), ProfilePage()][_selectedIndex],
+          [
+            DashboardScreen(),
+
+            FavouriteScreen(),
+            QuoteScreen(),
+            ProfilePage(),
+          ][_selectedIndex],
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (index) {
           setState(() {
@@ -39,6 +46,10 @@ class _NavBarState extends State<NavBar> {
             label: "Dashboard",
           ),
           NavigationDestination(icon: Icon(Icons.favorite), label: "Favorites"),
+          NavigationDestination(
+            icon: Icon(Icons.format_quote),
+            label: "Quotes",
+          ),
           NavigationDestination(icon: Icon(Icons.person), label: "Person"),
         ],
       ),
